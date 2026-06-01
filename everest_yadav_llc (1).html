@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everest Yadav LLC | Amazon FBA Retailer | Sheridan, WY</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark: #0d1117;
+  --dark2: #161b22;
+  --dark3: #1f2937;
+  --accent: #2563eb;
+  --accent2: #3b82f6;
+  --gold: #d4a843;
+  --gold2: #e8c06a;
+  --cream: #f9f7f3;
+  --cream2: #f0ece4;
+  --white: #ffffff;
+  --muted: #6b7280;
+  --text: #111827;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Jost',sans-serif; background:var(--cream); color:var(--text); line-height:1.6; }
+
+/* NAV */
+nav {
+  position:fixed; top:0; width:100%; z-index:200;
+  background:rgba(13,17,23,0.97); backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(212,168,67,0.18);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 6%; height:70px;
+}
+.logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+.logo-mark {
+  width:38px; height:38px; background:var(--gold);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Cormorant Garamond',serif; font-size:18px; font-weight:600;
+  color:var(--dark); border-radius:2px; letter-spacing:0.02em;
+}
+.logo-name { font-family:'Cormorant Garamond',serif; font-size:19px; color:var(--white); font-weight:500; letter-spacing:0.04em; }
+.logo-name span { color:var(--gold); }
+.nav-links { display:flex; gap:30px; list-style:none; }
+.nav-links a { color:rgba(255,255,255,0.65); font-size:13px; font-weight:400; text-decoration:none; letter-spacing:0.05em; text-transform:uppercase; transition:color 0.2s; }
+.nav-links a:hover { color:var(--gold); }
+.nav-cta { background:var(--gold); color:var(--dark); padding:10px 24px; font-size:13px; font-weight:500; text-decoration:none; letter-spacing:0.06em; text-transform:uppercase; transition:background 0.2s; border-radius:2px; }
+.nav-cta:hover { background:var(--gold2); }
+
+/* HERO */
+.hero {
+  min-height:100vh; background:var(--dark);
+  display:flex; align-items:center; padding:0 6%;
+  position:relative; overflow:hidden;
+}
+.hero-bg-lines {
+  position:absolute; inset:0; opacity:0.035;
+  background-image:
+    linear-gradient(rgba(212,168,67,1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,168,67,1) 1px, transparent 1px);
+  background-size:80px 80px;
+}
+.hero-glow {
+  position:absolute; right:-100px; top:50%; transform:translateY(-50%);
+  width:600px; height:600px;
+  background:radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 65%);
+  pointer-events:none;
+}
+.hero-glow2 {
+  position:absolute; left:30%; bottom:-100px;
+  width:400px; height:400px;
+  background:radial-gradient(circle, rgba(212,168,67,0.06) 0%, transparent 65%);
+  pointer-events:none;
+}
+.hero-left { position:relative; max-width:660px; z-index:1; }
+.hero-pill {
+  display:inline-flex; align-items:center; gap:8px;
+  border:1px solid rgba(212,168,67,0.35); color:var(--gold);
+  font-size:11px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase;
+  padding:7px 16px; border-radius:99px; margin-bottom:30px;
+  animation:fadeUp 0.6s ease both;
+}
+.hero-pill-dot { width:7px; height:7px; background:var(--gold); border-radius:50%; animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.hero h1 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(40px,5.5vw,66px);
+  color:var(--white); font-weight:500; line-height:1.12;
+  margin-bottom:22px;
+  animation:fadeUp 0.7s 0.1s ease both;
+}
+.hero h1 .gold { color:var(--gold); }
+.hero h1 .blue { color:#60a5fa; }
+.hero-desc {
+  font-size:17px; color:rgba(255,255,255,0.55); max-width:500px;
+  line-height:1.85; font-weight:300; margin-bottom:42px;
+  animation:fadeUp 0.7s 0.2s ease both;
+}
+.hero-actions { display:flex; gap:14px; flex-wrap:wrap; animation:fadeUp 0.7s 0.3s ease both; }
+.btn-gold { background:var(--gold); color:var(--dark); padding:15px 34px; font-size:13px; font-weight:500; text-decoration:none; letter-spacing:0.07em; text-transform:uppercase; border-radius:2px; transition:background 0.2s; }
+.btn-gold:hover { background:var(--gold2); }
+.btn-outline { border:1px solid rgba(255,255,255,0.22); color:rgba(255,255,255,0.8); padding:15px 34px; font-size:13px; text-decoration:none; letter-spacing:0.07em; text-transform:uppercase; border-radius:2px; transition:all 0.2s; }
+.btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+.hero-badges {
+  position:absolute; bottom:50px; right:6%;
+  display:flex; gap:16px; z-index:1;
+  animation:fadeUp 0.7s 0.4s ease both;
+}
+.hero-badge {
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+  border-radius:4px; padding:14px 20px; text-align:center;
+}
+.hero-badge .val { font-family:'Cormorant Garamond',serif; font-size:30px; color:var(--gold); font-weight:500; line-height:1; }
+.hero-badge .key { font-size:10px; color:rgba(255,255,255,0.4); letter-spacing:0.1em; text-transform:uppercase; margin-top:4px; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+
+/* TRUST BAR */
+.trust-bar {
+  background:var(--dark2); border-top:1px solid rgba(212,168,67,0.12); border-bottom:1px solid rgba(212,168,67,0.12);
+  padding:18px 6%;
+  display:flex; align-items:center; justify-content:center; gap:48px; flex-wrap:wrap;
+}
+.trust-item { display:flex; align-items:center; gap:10px; font-size:13px; color:rgba(255,255,255,0.5); letter-spacing:0.04em; }
+.trust-check { width:20px; height:20px; background:rgba(212,168,67,0.12); border:1px solid rgba(212,168,67,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; }
+.trust-check svg { width:10px; height:10px; stroke:var(--gold); fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
+
+/* ABOUT */
+.about { background:var(--cream); padding:100px 6%; }
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.label { font-size:11px; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
+.big-title { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.5vw,44px); font-weight:500; color:var(--dark); line-height:1.2; margin-bottom:20px; }
+.body-text { font-size:15px; color:var(--muted); line-height:1.9; margin-bottom:14px; }
+.creds { display:flex; flex-direction:column; gap:12px; margin-top:28px; }
+.cred-row { display:flex; align-items:center; gap:10px; font-size:14px; color:var(--text); }
+.cred-icon { width:24px; height:24px; background:#dbeafe; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.cred-icon svg { width:12px; height:12px; stroke:#1d4ed8; fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
+.about-card {
+  background:var(--dark); border-radius:4px; padding:48px 40px; position:relative; overflow:hidden;
+}
+.about-card::after {
+  content:''; position:absolute; top:-40px; right:-40px;
+  width:200px; height:200px;
+  background:radial-gradient(circle, rgba(212,168,67,0.1) 0%, transparent 70%);
+}
+.about-card-item { margin-bottom:30px; padding-bottom:30px; border-bottom:1px solid rgba(255,255,255,0.07); }
+.about-card-item:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+.about-card-num { font-family:'Cormorant Garamond',serif; font-size:13px; color:var(--gold); letter-spacing:0.1em; margin-bottom:8px; }
+.about-card-title { font-size:15px; font-weight:500; color:var(--white); margin-bottom:6px; }
+.about-card-text { font-size:13px; color:rgba(255,255,255,0.45); line-height:1.7; }
+
+/* HOW IT WORKS */
+.how { background:var(--cream2); padding:100px 6%; }
+.how-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin-top:56px; position:relative; }
+.how-steps::before {
+  content:''; position:absolute; top:28px; left:12.5%; right:12.5%; height:1px;
+  background:linear-gradient(90deg, transparent, var(--gold), var(--accent), var(--gold), transparent);
+  opacity:0.3;
+}
+.step { text-align:center; padding:0 20px; }
+.step-circle {
+  width:56px; height:56px; border-radius:50%; margin:0 auto 20px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600;
+  position:relative; z-index:1;
+}
+.step-circle.gold { background:var(--gold); color:var(--dark); }
+.step-circle.blue { background:#2563eb; color:var(--white); }
+.step-title { font-size:15px; font-weight:500; color:var(--dark); margin-bottom:8px; }
+.step-text { font-size:13px; color:var(--muted); line-height:1.7; }
+
+/* WHY PARTNER */
+.why { background:var(--dark); padding:100px 6%; }
+.why .big-title { color:var(--white); }
+.why .body-text { color:rgba(255,255,255,0.45); }
+.why-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,0.06); margin-top:56px; border:1px solid rgba(255,255,255,0.06); }
+.why-card { background:var(--dark2); padding:36px 28px; transition:background 0.2s; }
+.why-card:hover { background:var(--dark3); }
+.why-card-icon { width:44px; height:44px; border-radius:4px; display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+.why-card-icon svg { width:20px; height:20px; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+.icon-gold { background:rgba(212,168,67,0.1); }
+.icon-gold svg { stroke:var(--gold); }
+.icon-blue { background:rgba(37,99,235,0.12); }
+.icon-blue svg { stroke:#60a5fa; }
+.why-card-title { font-size:16px; font-weight:500; color:var(--white); margin-bottom:10px; }
+.why-card-text { font-size:13px; color:rgba(255,255,255,0.45); line-height:1.7; }
+
+/* CATEGORIES */
+.cats { background:var(--cream); padding:100px 6%; }
+.cats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:48px; }
+.cat-card {
+  background:var(--white); border:1px solid rgba(0,0,0,0.07); border-radius:4px;
+  padding:28px 22px; text-align:center; transition:all 0.2s;
+  border-bottom:3px solid transparent;
+}
+.cat-card:hover { border-bottom-color:var(--gold); transform:translateY(-3px); box-shadow:0 8px 24px rgba(0,0,0,0.08); }
+.cat-icon { font-size:28px; margin-bottom:12px; }
+.cat-name { font-size:14px; font-weight:500; color:var(--dark); margin-bottom:6px; }
+.cat-sub { font-size:12px; color:var(--muted); }
+
+/* CONTACT */
+.contact { background:var(--dark2); padding:100px 6%; }
+.contact .big-title { color:var(--white); }
+.contact-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:64px; margin-top:56px; align-items:start; }
+.contact-info-title { font-size:14px; font-weight:500; color:rgba(255,255,255,0.9); margin-bottom:24px; letter-spacing:0.05em; }
+.info-card {
+  display:flex; align-items:flex-start; gap:14px;
+  background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07);
+  border-radius:4px; padding:18px; margin-bottom:12px;
+}
+.info-icon { width:38px; height:38px; border-radius:4px; display:flex; align-items:center; justify-content:center; flex-shrink:0; background:rgba(212,168,67,0.1); }
+.info-icon svg { width:16px; height:16px; stroke:var(--gold); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.info-label { font-size:10px; color:rgba(255,255,255,0.35); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:4px; }
+.info-value { font-size:14px; color:var(--white); line-height:1.5; }
+.contact-note { font-size:13px; color:rgba(255,255,255,0.35); margin-top:20px; line-height:1.7; border-left:2px solid var(--gold); padding-left:14px; }
+
+/* FORM */
+.contact-form { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:4px; padding:40px; }
+.form-title { font-size:17px; font-weight:500; color:var(--white); margin-bottom:6px; }
+.form-sub { font-size:13px; color:rgba(255,255,255,0.4); margin-bottom:28px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.fg { margin-bottom:16px; }
+.fg label { display:block; font-size:11px; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:7px; }
+.fg input, .fg select, .fg textarea {
+  width:100%; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+  border-radius:3px; padding:11px 14px; color:var(--white);
+  font-family:'Jost',sans-serif; font-size:14px; outline:none; transition:border-color 0.2s;
+}
+.fg input::placeholder, .fg textarea::placeholder { color:rgba(255,255,255,0.25); }
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-color:var(--gold); }
+.fg select option { background:var(--dark2); }
+.fg textarea { resize:vertical; min-height:110px; }
+.form-btn {
+  width:100%; background:var(--gold); color:var(--dark); border:none;
+  padding:14px; font-family:'Jost',sans-serif; font-size:13px; font-weight:500;
+  letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; border-radius:2px;
+  transition:background 0.2s; margin-top:4px;
+}
+.form-btn:hover { background:var(--gold2); }
+
+/* FOOTER */
+footer {
+  background:#070c12; padding:36px 6%;
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+  border-top:1px solid rgba(212,168,67,0.12);
+}
+.footer-left { display:flex; flex-direction:column; gap:6px; }
+.footer-logo-text { font-family:'Cormorant Garamond',serif; font-size:17px; color:var(--white); }
+.footer-logo-text span { color:var(--gold); }
+.footer-addr { font-size:12px; color:rgba(255,255,255,0.3); line-height:1.6; }
+.footer-right { display:flex; flex-direction:column; align-items:flex-end; gap:6px; }
+.footer-badge { font-size:11px; color:var(--gold); border:1px solid rgba(212,168,67,0.3); padding:5px 14px; border-radius:99px; letter-spacing:0.06em; }
+.footer-copy { font-size:12px; color:rgba(255,255,255,0.25); }
+
+@media(max-width:900px){
+  .two-col,.contact-grid,.why-cards,.how-steps,.cats-grid { grid-template-columns:1fr; }
+  .hero-badges { position:static; margin-top:48px; }
+  .nav-links { display:none; }
+  .form-row { grid-template-columns:1fr; }
+  .how-steps::before { display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-mark">EY</div>
+    <span class="logo-name">Everest Yadav <span>LLC</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#how">How We Buy</a></li>
+    <li><a href="#why">Why Partner</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Work With Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-lines"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-left">
+    <div class="hero-pill"><div class="hero-pill-dot"></div>Amazon FBA Retailer &nbsp;·&nbsp; Sheridan, Wyoming, USA</div>
+    <h1>Your Trusted <span class="gold">Retail</span><br>Partner on <span class="blue">Amazon</span><br>Marketplace</h1>
+    <p class="hero-desc">Everest Yadav LLC is a registered US-based Amazon FBA retailer actively sourcing quality products from local distributors, wholesalers, and authorized brands across the United States.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-gold">Contact Us Today</a>
+      <a href="#about" class="btn-outline">Learn About Us</a>
+    </div>
+  </div>
+  <div class="hero-badges">
+    <div class="hero-badge">
+      <div class="val">LLC</div>
+      <div class="key">Registered USA</div>
+    </div>
+    <div class="hero-badge">
+      <div class="val">FBA</div>
+      <div class="key">Amazon Seller</div>
+    </div>
+    <div class="hero-badge">
+      <div class="val">WY</div>
+      <div class="key">Wyoming Based</div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+    Registered LLC — Wyoming, USA
+  </div>
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+    Valid EIN & Resale Certificate
+  </div>
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+    Amazon Professional Seller Account
+  </div>
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+    Fulfilled By Amazon (FBA)
+  </div>
+  <div class="trust-item">
+    <div class="trust-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+    MAP Policy Compliant
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="two-col">
+    <div>
+      <div class="label">About Us</div>
+      <h2 class="big-title">A Genuine Amazon FBA Retailer Looking to Build Lasting Partnerships</h2>
+      <p class="body-text">Everest Yadav LLC is a legitimate, professionally registered Amazon FBA retail business based in Sheridan, Wyoming. We purchase products directly from authorized brands, local distributors, and wholesalers — and sell them to customers on Amazon.com through the Fulfilled By Amazon (FBA) programme.</p>
+      <p class="body-text">We are not a middleman or dropshipper. We physically purchase inventory, send it to Amazon's fulfilment centres, and manage the complete retail process. We are looking for reliable, long-term supplier and brand relationships built on trust and mutual growth.</p>
+      <div class="creds">
+        <div class="cred-row"><div class="cred-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Everest Yadav LLC — Registered in Wyoming, USA</div>
+        <div class="cred-row"><div class="cred-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Valid Federal EIN (Employer Identification Number)</div>
+        <div class="cred-row"><div class="cred-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>State Resale Certificate — Tax-exempt purchases</div>
+        <div class="cred-row"><div class="cred-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Amazon Professional Seller Account (FBA)</div>
+        <div class="cred-row"><div class="cred-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Strict MAP & brand policy compliance</div>
+        <div class="cred-row"><div class="cred-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Consistent repeat purchase orders</div>
+      </div>
+    </div>
+    <div class="about-card">
+      <div class="about-card-item">
+        <div class="about-card-num">01 — BUSINESS TYPE</div>
+        <div class="about-card-title">Amazon FBA Retailer</div>
+        <div class="about-card-text">We purchase inventory from suppliers and brands, ship to Amazon FBA warehouses, and sell to end customers on Amazon.com. We are a retailer, not a wholesaler or dropshipper.</div>
+      </div>
+      <div class="about-card-item">
+        <div class="about-card-num">02 — LEGAL STANDING</div>
+        <div class="about-card-title">Registered LLC — Wyoming, USA</div>
+        <div class="about-card-text">Everest Yadav LLC is a fully registered limited liability company in the state of Wyoming. We hold a valid EIN, resale certificate, and business licence — all available upon request.</div>
+      </div>
+      <div class="about-card-item">
+        <div class="about-card-num">03 — OUR COMMITMENT</div>
+        <div class="about-card-title">Long-Term Reliable Buyer</div>
+        <div class="about-card-text">We are not a one-time buyer. We place consistent, repeat orders and aim to build long-term relationships with the brands, distributors, and wholesalers we work with.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE BUY -->
+<section class="how" id="how">
+  <div class="label">Our Process</div>
+  <h2 class="big-title">How We Source & Sell</h2>
+  <p class="body-text">A simple, transparent process from sourcing to selling on Amazon.</p>
+  <div class="how-steps">
+    <div class="step">
+      <div class="step-circle gold">1</div>
+      <div class="step-title">Contact Supplier</div>
+      <div class="step-text">We reach out to authorized brands, local distributors, and wholesalers to apply for a retail buying account.</div>
+    </div>
+    <div class="step">
+      <div class="step-circle blue">2</div>
+      <div class="step-title">Purchase Inventory</div>
+      <div class="step-text">We place purchase orders and buy products at wholesale or trade prices using our business account and resale certificate.</div>
+    </div>
+    <div class="step">
+      <div class="step-circle gold">3</div>
+      <div class="step-title">Ship to Amazon FBA</div>
+      <div class="step-text">Inventory is prepared and shipped directly to Amazon's fulfilment centres across the USA for storage and dispatch.</div>
+    </div>
+    <div class="step">
+      <div class="step-circle blue">4</div>
+      <div class="step-title">Sell on Amazon</div>
+      <div class="step-text">Products are listed on Amazon.com. Amazon handles storage, packing, shipping, and customer service on our behalf.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PARTNER -->
+<section class="why" id="why">
+  <div class="label" style="color:var(--gold)">Why Work With Us</div>
+  <h2 class="big-title">Reasons to Partner With Everest Yadav LLC</h2>
+  <div class="why-cards">
+    <div class="why-card">
+      <div class="why-card-icon icon-gold">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="why-card-title">Fully Legitimate Business</div>
+      <div class="why-card-text">We are a properly registered Wyoming LLC with a valid EIN, resale certificate, and business licence. We buy through official channels only — no grey market activity.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon icon-blue">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="why-card-title">Consistent Purchase Orders</div>
+      <div class="why-card-text">We are not a one-time buyer. We make consistent, regular purchase orders and are committed to growing our order volume as our business scales on Amazon.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon icon-gold">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="why-card-title">Fast Payment & Reliability</div>
+      <div class="why-card-text">We pay on time and honour every purchase order. Our goal is to be a reliable, low-friction retail buyer that suppliers and brands enjoy working with.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon icon-blue">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div class="why-card-icon icon-blue" style="display:none"></div>
+      <div class="why-card-title">MAP Policy Compliant</div>
+      <div class="why-card-text">We fully respect Minimum Advertised Price policies. We never undercut brand pricing, protecting your brand value and other retail partners in the market.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon icon-gold">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="why-card-title">Long-Term Partnership Focus</div>
+      <div class="why-card-text">We look for long-term relationships, not quick one-off deals. We invest time in understanding your brand and products to represent them well on Amazon.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-card-icon icon-blue">
+        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <div class="why-card-title">Amazon FBA Fulfilment</div>
+      <div class="why-card-text">Products are stored and shipped by Amazon — ensuring fast, reliable delivery to customers nationwide with Amazon Prime eligibility and world-class logistics.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="cats" id="categories">
+  <div class="label">Product Categories</div>
+  <h2 class="big-title">Categories We Actively Source</h2>
+  <p class="body-text">We source products across a wide range of general merchandise categories for the US Amazon marketplace.</p>
+  <div class="cats-grid">
+    <div class="cat-card"><div class="cat-icon">🏠</div><div class="cat-name">Home & Kitchen</div><div class="cat-sub">Household essentials & décor</div></div>
+    <div class="cat-card"><div class="cat-icon">💊</div><div class="cat-name">Health & Beauty</div><div class="cat-sub">Personal care & wellness</div></div>
+    <div class="cat-card"><div class="cat-icon">🧸</div><div class="cat-name">Toys & Games</div><div class="cat-sub">Children's products & hobbies</div></div>
+    <div class="cat-card"><div class="cat-icon">⚡</div><div class="cat-name">Electronics</div><div class="cat-sub">Gadgets & accessories</div></div>
+    <div class="cat-card"><div class="cat-icon">🐾</div><div class="cat-name">Pet Supplies</div><div class="cat-sub">Food, toys & accessories</div></div>
+    <div class="cat-card"><div class="cat-icon">🍽️</div><div class="cat-name">Grocery & Food</div><div class="cat-sub">Packaged & specialty foods</div></div>
+    <div class="cat-card"><div class="cat-icon">🏃</div><div class="cat-name">Sports & Outdoors</div><div class="cat-sub">Fitness & outdoor gear</div></div>
+    <div class="cat-card"><div class="cat-icon">🧴</div><div class="cat-name">Office & Stationery</div><div class="cat-sub">Business & school supplies</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="label" style="color:var(--gold)">Get In Touch</div>
+  <h2 class="big-title">Contact Everest Yadav LLC</h2>
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info-title">Our Business Details</div>
+      <div class="info-card">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div>
+          <div class="info-label">Business Name</div>
+          <div class="info-value">Everest Yadav LLC</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.06 6.06l1.8-1.81a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div>
+          <div class="info-label">Phone Number</div>
+          <div class="info-value">+1 (307) 998-3015</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div>
+          <div class="info-label">Email Address</div>
+          <div class="info-value"><a href="mailto:contact@everestyadav.com" style="color:var(--gold); text-decoration:none;">contact@everestyadav.com</a></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div>
+          <div class="info-label">Business Address</div>
+          <div class="info-value">30 North Gould Street, Ste R<br>Sheridan, WY 82801<br>United States</div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div>
+          <div class="info-label">Selling Platform</div>
+          <div class="info-value">Amazon.com — FBA (Fulfilled By Amazon)</div>
+        </div>
+      </div>
+      <div class="contact-note">
+        We are actively looking to open wholesale and retail buying accounts with local distributors, authorized brand representatives, and wholesalers across all product categories. We welcome first contact by phone, email, or through the form.
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Send Us a Message</div>
+      <div class="form-sub">For wholesale account enquiries, product availability, or partnership discussions. You can also email us directly at <a href="mailto:contact@everestyadav.com" style="color:var(--gold);">contact@everestyadav.com</a></div>
+      <div class="form-row">
+        <div class="fg"><label>Your Name</label><input type="text" placeholder="John Smith" /></div>
+        <div class="fg"><label>Company / Brand</label><input type="text" placeholder="Your Company LLC" /></div>
+      </div>
+      <div class="fg"><label>Email Address</label><input type="email" placeholder="your@company.com" /></div>
+      <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+1 (___) ___-____" /></div>
+      <div class="fg">
+        <label>Enquiry Type</label>
+        <select>
+          <option>Wholesale / Trade Account Application</option>
+          <option>Brand Partnership Enquiry</option>
+          <option>Authorized Distributor Enquiry</option>
+          <option>Product Availability Enquiry</option>
+          <option>General Business Enquiry</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message</label><textarea placeholder="Please describe your products, categories, pricing terms, and how you'd like to work with us..."></textarea></div>
+      <button class="form-btn" onclick="this.textContent='Message Sent! We will respond within 1 business day.'; this.style.background='#16a34a'; this.style.color='#fff';">Send Message →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="footer-logo-text">Everest Yadav <span>LLC</span></div>
+    <div class="footer-addr">
+      30 North Gould Street, Ste R, Sheridan, WY 82801, United States<br>
+      Phone: +1 (307) 998-3015 &nbsp;|&nbsp; contact@everestyadav.com &nbsp;|&nbsp; Amazon FBA Retailer
+    </div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-badge">Registered Wyoming LLC</div>
+    <div class="footer-copy">© 2025 Everest Yadav LLC. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
